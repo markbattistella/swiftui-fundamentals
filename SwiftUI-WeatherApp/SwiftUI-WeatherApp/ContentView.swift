@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  SwuftUI-WeatherApp
+//  SwiftUI-WeatherApp
 //
 //  Created by Mark Battistella on 7/8/21.
 //
