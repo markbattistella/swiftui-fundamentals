@@ -19,6 +19,7 @@ struct ListView: View {
 				List(viewModel.appertisers) { appertiser in
 					AppertiserListCell(appertiser: appertiser)
 				}
+				.listStyle(.plain)
 				.navigationTitle("Appertisers")
 			}
 			
