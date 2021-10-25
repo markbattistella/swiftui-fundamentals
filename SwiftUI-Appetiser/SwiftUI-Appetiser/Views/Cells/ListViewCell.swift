@@ -15,8 +15,7 @@ struct AppertiserListCell: View {
 
 		HStack {
 			
-			Image("asian-flank-steak")
-				.resizable()
+			AppertiserRemoteImage(urlString: appertiser.imageURL)
 				.aspectRatio(contentMode: .fit)
 				.frame(width: 120, height: 90)
 				.cornerRadius(8)
@@ -25,6 +24,7 @@ struct AppertiserListCell: View {
 				Text(appertiser.name)
 					.font(.title3)
 					.fontWeight(.medium)
+
 				Text("$\(appertiser.price, specifier: "%.2f")")
 					.foregroundColor(.secondary)
 					.fontWeight(.semibold)

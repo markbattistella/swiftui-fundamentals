@@ -7,15 +7,21 @@
 
 import Foundation
 
-final class AppertiserListViewModel: ObservableObject {
+final class ListViewModel: ObservableObject {
 	
 	@Published var appertisers: [Appertiser] = []
 	@Published var alertItem: AlertItem?
-
+	@Published var isLoading = false
 	
 	func getAppertisers() {
+
+		isLoading = true
+
 		NetworkManager.shared.getAppetisers { result in
 			DispatchQueue.main.async {
+
+				self.isLoading = false
+
 				switch result {
 					case .success(let appertisers):
 						self.appertisers = appertisers
