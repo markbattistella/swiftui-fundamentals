@@ -12,7 +12,9 @@ final class ListViewModel: ObservableObject {
 	@Published var appertisers: [Appertiser] = []
 	@Published var alertItem: AlertItem?
 	@Published var isLoading = false
-	
+	@Published var selectedAppertiser: Appertiser!
+	@Published var isShowingDetail = false
+
 	func getAppertisers() {
 
 		isLoading = true

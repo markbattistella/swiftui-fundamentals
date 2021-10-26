@@ -18,18 +18,31 @@ struct ListView: View {
 
 				List(viewModel.appertisers) { appertiser in
 					AppertiserListCell(appertiser: appertiser)
+						.onTapGesture {
+							viewModel.isShowingDetail = true
+							viewModel.selectedAppertiser = appertiser
+						}
 				}
 				.listStyle(.plain)
 				.navigationTitle("Appertisers")
+				.disabled(viewModel.isShowingDetail)
 			}
 			
 			.onAppear {
 				viewModel.getAppertisers()
 			}
 
+			.blur(radius: viewModel.isShowingDetail ? 20 : 0)
 			
 			if(viewModel.isLoading) {
 				LoadingView()
+			}
+			
+			if(viewModel.isShowingDetail) {
+				DetailView(
+					appertiser: viewModel.selectedAppertiser,
+					isShowingDetail: $viewModel.isShowingDetail
+				)
 			}
 			
 		}

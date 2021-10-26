@@ -24,6 +24,11 @@
 		A3D7F9002726628F000A8DCB /* Colour+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7F8FF2726628F000A8DCB /* Colour+Ext.swift */; };
 		A3D7F902272668C3000A8DCB /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7F901272668C3000A8DCB /* RemoteImage.swift */; };
 		A3D7F91227267387000A8DCB /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7F91127267387000A8DCB /* DetailView.swift */; };
+		A3D7F9152727B8DA000A8DCB /* APButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7F9142727B8DA000A8DCB /* APButton.swift */; };
+		A3D7F9172727B96A000A8DCB /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7F9162727B96A000A8DCB /* XDismissButton.swift */; };
+		A3D7F9192727BE4B000A8DCB /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7F9182727BE4B000A8DCB /* AccountViewModel.swift */; };
+		A3D7F91B2727BFB1000A8DCB /* String+Email.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7F91A2727BFB1000A8DCB /* String+Email.swift */; };
+		A3D7F91D2727CA25000A8DCB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D7F91C2727CA25000A8DCB /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,11 @@
 		A3D7F8FF2726628F000A8DCB /* Colour+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colour+Ext.swift"; sourceTree = "<group>"; };
 		A3D7F901272668C3000A8DCB /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		A3D7F91127267387000A8DCB /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A3D7F9142727B8DA000A8DCB /* APButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APButton.swift; sourceTree = "<group>"; };
+		A3D7F9162727B96A000A8DCB /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		A3D7F9182727BE4B000A8DCB /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		A3D7F91A2727BFB1000A8DCB /* String+Email.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Email.swift"; sourceTree = "<group>"; };
+		A3D7F91C2727CA25000A8DCB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				A3D12F052722693400A43051 /* AccountView.swift */,
+				A3D7F9182727BE4B000A8DCB /* AccountViewModel.swift */,
 			);
 			path = AccountView;
 			sourceTree = "<group>";
@@ -154,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				A3D7F8FF2726628F000A8DCB /* Colour+Ext.swift */,
+				A3D7F91A2727BFB1000A8DCB /* String+Email.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -171,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				A3D12F0927226C6700A43051 /* AppertiserModel.swift */,
+				A3D7F91C2727CA25000A8DCB /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +191,7 @@
 		A3D7F90C27267281000A8DCB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A3D7F9132727B8CB000A8DCB /* Buttons */,
 				A3D7F90F27267297000A8DCB /* Image */,
 				A3D7F90E27267291000A8DCB /* Cells */,
 				A3D7F90D27267289000A8DCB /* UIKit Components */,
@@ -217,6 +231,15 @@
 				A396333C271671EA003F3FED /* Preview Content */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		A3D7F9132727B8CB000A8DCB /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				A3D7F9142727B8DA000A8DCB /* APButton.swift */,
+				A3D7F9162727B96A000A8DCB /* XDismissButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,10 +314,15 @@
 			files = (
 				A3D12F062722693400A43051 /* AccountView.swift in Sources */,
 				A3D7F8F827264E31000A8DCB /* APError.swift in Sources */,
+				A3D7F9172727B96A000A8DCB /* XDismissButton.swift in Sources */,
 				A3D12F042722692B00A43051 /* ListView.swift in Sources */,
+				A3D7F91B2727BFB1000A8DCB /* String+Email.swift in Sources */,
+				A3D7F9192727BE4B000A8DCB /* AccountViewModel.swift in Sources */,
 				A3D12F0A27226C6700A43051 /* AppertiserModel.swift in Sources */,
 				A3D7F9002726628F000A8DCB /* Colour+Ext.swift in Sources */,
+				A3D7F91D2727CA25000A8DCB /* User.swift in Sources */,
 				A3963339271671E8003F3FED /* AppetiserTabView.swift in Sources */,
+				A3D7F9152727B8DA000A8DCB /* APButton.swift in Sources */,
 				A3D7F8FE272661D6000A8DCB /* LoadingView.swift in Sources */,
 				A3D7F8F627264D53000A8DCB /* NetworkManager.swift in Sources */,
 				A3963337271671E8003F3FED /* SwiftUI_AppetisersApp.swift in Sources */,
