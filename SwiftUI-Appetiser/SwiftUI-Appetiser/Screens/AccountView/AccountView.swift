@@ -10,6 +10,11 @@ import SwiftUI
 struct AccountView: View {
 	
 	@StateObject var viewModel = AccountViewModel()
+	@FocusState private var focusedTextField: FormTextField?
+	
+	enum FormTextField {
+		case firstName, lastName, emailAddress
+	}
 
     var body: some View {
 
@@ -20,29 +25,33 @@ struct AccountView: View {
 				Section {
 					TextField("First name", text: $viewModel.user.firstName)
 						.autocapitalization(.words)
+						.focused($focusedTextField, equals: .firstName)
+						.onSubmit { focusedTextField = .lastName }
+						.submitLabel(.next)
+
 					TextField("Last name", text: $viewModel.user.lastName)
 						.autocapitalization(.words)
+						.focused($focusedTextField, equals: .lastName)
+						.onSubmit { focusedTextField = .emailAddress }
+						.submitLabel(.next)
+					
 					TextField("Email address", text: $viewModel.user.emailAddress)
 						.keyboardType(.emailAddress)
 						.autocapitalization(.none)
 						.disableAutocorrection(true)
+						.focused($focusedTextField, equals: .emailAddress)
+						.onSubmit { focusedTextField = nil }
+						.submitLabel(.done)
 					
 					DatePicker(
 						"Birthday",
 						selection: $viewModel.user.birthdate,
 						displayedComponents: .date
 					)
-					
-					Button {
-						viewModel.saveChanges()
-					} label: {
-						Text("Save changes")
-					}
 				} header: {
 					Text("Personal info")
 				}
 
-				
 				// -- additional info
 				Section {
 					Toggle("Extra napkins", isOn: $viewModel.user.extraNapkins)
@@ -51,6 +60,15 @@ struct AccountView: View {
 					Text("Requests")
 				}
 				.toggleStyle(SwitchToggleStyle(tint: .brandPrimary))
+				
+				//
+				Section {
+					Button {
+						viewModel.saveChanges()
+					} label: {
+						Text("Save changes")
+					}
+				}
 			}
 			
 			.onAppear(perform: {
@@ -66,6 +84,13 @@ struct AccountView: View {
 			})
 			
 			.navigationTitle("Account")
+			.toolbar {
+				ToolbarItemGroup(placement: .keyboard) {
+					Button("Dismiss") {
+						focusedTextField = nil
+					}
+				}
+			}
 		}
 	}
 }

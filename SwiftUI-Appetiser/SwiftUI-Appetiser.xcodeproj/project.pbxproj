@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31FC57C272A661B00C29A38 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31FC57B272A661B00C29A38 /* CustomModifiers.swift */; };
 		A3963337271671E8003F3FED /* SwiftUI_AppetisersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3963336271671E8003F3FED /* SwiftUI_AppetisersApp.swift */; };
 		A3963339271671E8003F3FED /* AppetiserTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3963338271671E8003F3FED /* AppetiserTabView.swift */; };
 		A396333B271671EA003F3FED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A396333A271671EA003F3FED /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A31FC57B272A661B00C29A38 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		A3963333271671E8003F3FED /* SwiftUI-Appetisers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Appetisers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3963336271671E8003F3FED /* SwiftUI_AppetisersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftUI_AppetisersApp.swift; path = "SwiftUI-Appetiser/Main/SwiftUI_AppetisersApp.swift"; sourceTree = SOURCE_ROOT; };
 		A3963338271671E8003F3FED /* AppetiserTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppetiserTabView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				A3D7F90F27267297000A8DCB /* Image */,
 				A3D7F90E27267291000A8DCB /* Cells */,
 				A3D7F90D27267289000A8DCB /* UIKit Components */,
+				A31FC57B272A661B00C29A38 /* CustomModifiers.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				A3D7F8FA27265D0B000A8DCB /* ListViewModel.swift in Sources */,
 				A3D7F8FC27265E2F000A8DCB /* Alert.swift in Sources */,
 				A3D12F082722693B00A43051 /* OrderView.swift in Sources */,
+				A31FC57C272A661B00C29A38 /* CustomModifiers.swift in Sources */,
 				A3D7F91227267387000A8DCB /* DetailView.swift in Sources */,
 				A3D7F8F427263F3C000A8DCB /* ListViewCell.swift in Sources */,
 			);
@@ -486,7 +490,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +520,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

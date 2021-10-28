@@ -15,10 +15,21 @@ struct AppertiserListCell: View {
 
 		HStack {
 			
-			AppertiserRemoteImage(urlString: appertiser.imageURL)
-				.aspectRatio(contentMode: .fit)
-				.frame(width: 120, height: 90)
-				.cornerRadius(8)
+			AsyncImage(url: URL(string: appertiser.imageURL)) { image in
+				image
+					.resizable()
+					.aspectRatio(contentMode: .fit)
+					.frame(width: 120, height: 90)
+					.cornerRadius(8)
+				
+			} placeholder: {
+				Image("food-placeholder")
+					.resizable()
+					.aspectRatio(contentMode: .fit)
+					.frame(width: 120, height: 90)
+					.cornerRadius(8)
+			}
+
 			
 			VStack(alignment: .leading, spacing: 5) {
 				Text(appertiser.name)
@@ -32,10 +43,4 @@ struct AppertiserListCell: View {
 			.padding(.leading)
 		}
 	}
-}
-
-struct ListViewCell_Previews: PreviewProvider {
-    static var previews: some View {
-		AppertiserListCell(appertiser: MockData.sampleAppetiserOne)
-    }
 }

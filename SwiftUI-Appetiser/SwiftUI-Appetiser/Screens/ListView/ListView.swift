@@ -18,6 +18,7 @@ struct ListView: View {
 
 				List(viewModel.appertisers) { appertiser in
 					AppertiserListCell(appertiser: appertiser)
+						.listRowSeparator(.hidden)
 						.onTapGesture {
 							viewModel.isShowingDetail = true
 							viewModel.selectedAppertiser = appertiser
@@ -28,9 +29,10 @@ struct ListView: View {
 				.disabled(viewModel.isShowingDetail)
 			}
 			
-			.onAppear {
+			.task {
 				viewModel.getAppertisers()
 			}
+			
 
 			.blur(radius: viewModel.isShowingDetail ? 20 : 0)
 			
